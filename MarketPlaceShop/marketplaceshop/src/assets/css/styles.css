@@ -1,0 +1,328 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*...Header...*/
+header{
+    width: 100%;
+    background: #00000099;
+    height: 90px;
+    position: fixed;
+    transition: background 0.5s;
+}
+.header-area {
+    width:80%;
+    height: 90px;
+    margin: auto;
+}
+.logo{
+    width: 30%;
+    height:90px;
+    float: left;
+}
+.logo img{
+    width: 90px;
+    padding-left: 20px;
+}
+.navegacion{
+    width: 70%;
+    height: 90px;
+    float: left;
+    text-align: right;
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+.navegacion ul {
+    list-style: none;
+}
+.navegacion ul>li{
+    position: relative;
+	display: inline-block;
+}
+.navegacion  ul li a{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: ABeeZee;
+}
+.navegacion ul li a:hover{
+color: crimson;
+transition: all .3s;
+}
+@font-face{
+    font-family:ABeeZee;
+    src: url(../fonts/ABeeZee-Regular.ttf);
+}
+.submenu{
+    position:absolute;
+    text-align: center;
+    visibility: hidden;
+    background: pink;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity .9s;
+}
+.submenu li {
+    padding-top: 20px;
+    padding-bottom:20px ;
+}
+.navegacion li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+.menu .active{
+    color:crimson;
+}
+
+/*...Slider...*/
+
+.slider{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: cambio 28s infinite alternate linear;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+.slider img{
+    width: 100%;
+    height: 100%;
+}
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+/*...Slider2...*/
+.slider2{
+    background: crimson;
+    width: 100%;
+    height: 350px;
+    line-height: 320px;
+    text-shadow: 0px 0px 5px #4444;
+    color: black;
+}
+.slider2 h2{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-size: 100px;
+    color: blanchedalmond;
+}
+
+/*...Slider3...*/
+.slider3{
+    background: aquamarine;
+    width: 100%;
+    height: 350px;
+    line-height: 320px;
+    text-shadow: 0px 0px 5px #4444;
+    color: black;
+}
+.slider3 h2{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-size: 100px;
+    color: blanchedalmond;
+}
+
+/*...Footer...*/
+ footer{
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 40px 0px;
+    
+}
+.container-footer-all{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding:40px;
+}
+.container-body{
+    display: flex;
+    justify-content: center;
+    margin-right: 400px;
+}
+.colum1{
+    max-width:600px ;
+    margin-right: 80px;
+}
+.colum1 h1{
+    font-size:22px;
+}
+.colum1 p{
+    font-size: 16px;
+    color: #C7C7C7;
+    margin-top: 20px;
+}
+.colum2{
+    max-width: 400px;
+}
+.colum2 h1{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.colum2 .row{
+    margin-top: 20px;
+    display: inline;
+}
+.colum2 p{
+    margin-top: 10px;
+    font-size: 18px;
+}
+.row img{
+    width: 36px;
+    height: 36px;
+}
+.row1 label{
+    color:#C7C7C7;
+}
+.row label{
+    margin-top: 10px;
+}
+.colum3{
+    max-width: 400px;
+}
+.colum3 h1{
+    font-size: 20px;
+}
+.row2{
+    margin-top:20px;
+}
+.row2 label{
+    display: flex;
+    max-width: 150px;
+    margin-top: 10px;
+}
+.container-footer{
+    width: 100%;
+    background: silver;
+    display:flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.copyright{
+    color: white;
+}
+.copyright a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*...Tabla-Lista...*/
+
+.table-info{
+   width: 100%;
+    margin:  0 auto;
+}
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 48px auto;
+    border-radius: 5px;
+} 
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+#customers tr:nth-child(even){
+    background-color: #f2f2f2;
+} 
+#customers tr:hover {
+    background-color: #ddd;
+}
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #252932;
+    color: white;
+}
+
+/*...Formularios...*/
+.forms{
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+.forms h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color: crimson;
+    font-size: 50px;
+}
+.buttonreg {
+    display: block;
+    margin-right: 45%;
+    margin-left: 45%;
+    margin-top: 50px;
+    background: crimson;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 20px;
+    border-radius: 6px;
+    border: 2px solid black;
+    transition: 0.s;
+}
+.buttonreg:hover{
+    color:crimson;
+    background: white;
+    transition: 0.9s;
+}
+.form-group input[type="text"]{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    display: block;
+}
+.form-group input[type="number"]{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    display: block;
+}
+.form-group input[type="file"]{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    display: block;
+}
+.form-groups input[type="text"]{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: block;
+}
