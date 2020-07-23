@@ -59,10 +59,10 @@ var controller={
         var query=Producto.find({});
         var variable=req.params.parametro;
         if(variable || !variable==undefined){
-            query.limit(4);
+            query.limit(2);
         }
         console.log(variable);
-        query.sort('nombre').exec((err,productos)=>{
+        query.sort('categoria').exec((err,productos)=>{
             if(err){
                 return res.status(404).send({
                     status:'Error',

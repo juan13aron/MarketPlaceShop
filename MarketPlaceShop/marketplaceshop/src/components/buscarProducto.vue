@@ -1,8 +1,4 @@
 <template>
-    <div>
-        <div class="slider3">
-            <h2>Lista Productos</h2>
-        </div>
         <div class="table-info">
             <table id="customers">
                 <tr>
@@ -25,53 +21,32 @@
                 </tr>    
             </table> 
         </div>
-    </div>   
 </template>
 <script>
-import axios from 'axios'
+import axios from 'axios';
 import Global from '../Global'
-import swal from 'sweetalert'
 export default {
-    name:'listProducto',
+    name:"BuscarProducto",
     methods:{
-        getProductos(){
-            axios.get(this.url+'listarproductos').then(res=>{
-                this.productos=res.data.productos;
+        getProductos(busqueda1){
+            axios.get(this.url+'listarproductos/'+busqueda1).then(res=>{
+                    this.productos=res.data.productos;
                 console.log(this.productos);
-            })
-        },
-        deleteProducto(id){
-            swal({
-                title: "¿Esta seguro de borrar el producto?",
-                text: "Esta operacion no se puede deshacer!",
-                icon: "warning",
-                buttons: true,
-                dangerMode: true
-            }).then(willDelete => {
-                    if (willDelete) {
-                    axios.delete(this.url + "eliminarproducto/" + id).then(res => {
-                        if (res.data) {
-                        swal("Producto eliminado");
-                        this.$router.push("/home");
-                        }
-                    });
-                } else {
-                swal("!No la embarraste!");
-                }
             });
-        }
-    },
-    mounted(){
-        this.getProductos();
+        },
     },
     data(){
         return{
-            productos:null,
-            url:Global.url,
-        }
-    }
-}
+            productos: null,
+            url: Global.url,
+        };
+    },
+    mounted(){
+        var busqueda=this.$route.params.buscar;
+        this.getProductos(busqueda);
+    },
+};
 </script>
-<style>
+<style >
 @import '../assets/css/styles.css';
 </style>

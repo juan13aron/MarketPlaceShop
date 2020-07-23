@@ -6,6 +6,8 @@ import Favoritos from './components/favoritos.vue'
 import InsertarProducto from './components/registroProducto.vue'
 import ListaProducto from './components/listProducto.vue'
 import EditarProducto from './components/editarProducto.vue'
+import BuscarProducto from './components/buscarProducto.vue'
+import Producto from './components/producto.vue'
 import ErrorComponent from './components/ErrorComponent.vue'
 
 Vue.config.productionTip = false
@@ -16,6 +18,8 @@ const routes=[
   {path:'/registroProducto',component:InsertarProducto},
   {path:'/editarproducto/:id',component:EditarProducto},
   {path:'/listProducto',component:ListaProducto},
+  {path:'/buscarProducto/:buscar',component:BuscarProducto},
+  {path:'/producto/:id',component:Producto},
   {path:'/',component:Home},
   {path:'*',component:ErrorComponent},
 ];

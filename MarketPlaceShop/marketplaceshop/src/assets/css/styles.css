@@ -144,12 +144,138 @@ transition: all .3s;
     text-align: center;
     font-size: 100px;
     color: blanchedalmond;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*...Slider4...*/
+.slider4{
+    background: steelblue;
+    width: 100%;
+    height: 350px;
+    line-height: 320px;
+    text-shadow: 0px 0px 5px #4444;
+    color: black;
+}
+.slider4 h2{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-size: 100px;
+    color: blanchedalmond;
+}
+
+/*...Slider5...*/
+.slider5{
+    background: #fefcff;
+    width: 100%;
+    height: 350px;
+    line-height: 320px;
+    text-shadow: 0px 0px 5px #4444;
+    color: black;
+}
+.slider5 h2{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-size: 100px;
+    background: linear-gradient(30deg,#6f72e7,#67fa67);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*...SliderHome...*/
+.slider-home{
+    background: #252932;
+    width: 60%;
+    padding: 30px 20%;
+    color: white;
+}
+.slider-home-text p{
+    margin-top: 10px;
+}
+.slider-home-text a{
+    color: white;
+}
+.slider-home-text a:hover{
+    color: gold;
+    text-decoration: underline;
+    transition: 0.9s;
+}
+
+/*...Categorias-box...*/
+
+.categorias{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.categorias h1{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+.container-categoria{
+    width: 1200px;
+    height: 700px;
+    background: gray;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+.item-categoria{
+    background: crimson;
+    color: #fff;
+    float: left;
+    width: 23.5%;
+    flex: none;
+    margin-bottom: 2%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.box-categoria {
+    margin: 30px;
+}
+.box-categoria img{
+    width: 150px;
+    margin: 15px;
+}
+.box-categoria a{
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+    width: 100%;
+    margin: auto;
+}
+.box-categoria a:hover{
+    text-decoration: underline;
+    color: cyan;
+    transition: 0.5s;
+}
+.inline-categoria{
+    display: flex;
+    margin-top: 10px;
+}
+.box-categoria span{
+    background: white;
+    color: crimson;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    border-radius: 6px;;
+}
+.box-categoria p{
+    color:black;
+    font-size: 19px;
+    margin-left: 5px;
 }
 
 /*...Footer...*/
  footer{
     width: 100%;
-    background: black;
+    background: #252932;
     color: white;
     padding: 40px 0px;
     
@@ -265,24 +391,45 @@ transition: all .3s;
     background-color: #252932;
     color: white;
 }
+.text-table{
+    color:black;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.text-table:hover{
+    color: crimson;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+/*...Elementos...*/
+
+.view-element{
+    padding: 500px;
+}
 
 /*...Formularios...*/
 .forms{
-    margin-top: 20px;
-    margin-bottom: 100px;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    background: linear-gradient(#fefcff, silver );
 }
 .forms h1{
     text-align: center;
     margin-bottom: 30px;
-    color: crimson;
+    color: #6f72e7;
     font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .buttonreg {
     display: block;
-    margin-right: 45%;
-    margin-left: 45%;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 50px;
-    background: crimson;
+    background: linear-gradient(30deg,#6f72e7,#fa67b5);
     color: white;
     font-size: 20px;
     text-decoration: none;
@@ -292,37 +439,82 @@ transition: all .3s;
     padding-right: 20px;
     font-weight: 20px;
     border-radius: 6px;
-    border: 2px solid black;
-    transition: 0.s;
+    border: 3px solid black;
+    transition: 1.5s;
 }
 .buttonreg:hover{
     color:crimson;
     background: white;
-    transition: 0.9s;
+    transition: 1.5s;
 }
 .form-group input[type="text"]{
     margin-left: auto;
     margin-right: auto;
+    width: 320px;
     margin-top: 10px;
+    padding: 15px;
     display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #6f72e7;
+    color: white;
+    border-radius: 10px;
+    border: solid 3px black;
+    transition: 1.2s;
 }
 .form-group input[type="number"]{
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
+    width: 320px;
+    padding: 15px;
     display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #6f72e7;
+    color: white;
+    border-radius: 10px;
+    border: solid 3px black;
+    transition: 1.2s;
 }
 .form-group input[type="file"]{
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
+    padding: 15px 50px;
     display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #6f72e7;
+    color: white;
+    border-radius: 10px;
+    border: solid 3px black;
+    transition: 1.2s;
 }
-.form-groups input[type="text"]{
+.form-group textarea{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    width: 330px;
+    margin-top: 15px;
+    height: 150px;
+    padding: 10px;
     display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #6f72e7;
+    color: white;
+    border-radius: 10px;
+    border: solid 3px black;
+    transition: 1.2s;
+}
+.form-group input:hover{
+    background: black;
+    transition: 1.2s;
+}
+.form-group textarea:hover{
+    background: black;
+    transition: 1.2s;
+}
+
+/*...Fondos...*/
+
+.page-forms{
+    background: linear-gradient(30deg,#6f72e7,#67fa67);
+    /*background: url('../img/Wallpappers/White.png');*/
 }
