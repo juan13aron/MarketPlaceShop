@@ -49,7 +49,7 @@ header{
     font-family: ABeeZee;
 }
 .navegacion ul li a:hover{
-color: crimson;
+color: #6f72e7;
 transition: all .3s;
 }
 @font-face{
@@ -60,10 +60,11 @@ transition: all .3s;
     position:absolute;
     text-align: center;
     visibility: hidden;
-    background: pink;
+    background: black;
     margin-top: 10px;
     opacity: 0;
     transition: opacity .9s;
+    border: double 2px white;
 }
 .submenu li {
     padding-top: 20px;
@@ -74,7 +75,55 @@ transition: all .3s;
     opacity: 1;
 }
 .menu .active{
-    color:crimson;
+    color:#6f72e7;
+}
+
+/*...Buscador...*/
+.buscador{
+    margin: 100px auto;
+    widows: 100%;
+    padding:50px 0;
+    background: #3E3F78;
+    text-align: center;
+}
+.buscador label{
+    color: white;
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.buscador input{
+    margin: 30px 0 0 0;
+    font-size: 18px;
+    background: #3b3d9c;
+    color: white;
+    padding:15px 20px;
+    border-radius: 10px;
+    border: solid 2px white;
+    width: 250px;
+    transition: 1.2s;
+}
+.buscador input:hover{
+    width: 600px;
+    transition: 1.2s;
+}
+.buscador button{
+    margin: 20px auto;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 20px;
+    border-radius: 6px;
+    border: 3px solid black;
+    transition: 1.5s;
+}
+.buscador button:hover{
+    background: #3b3d9c;
+    color: #6f72e7;
 }
 
 /*...Slider...*/
@@ -96,7 +145,7 @@ transition: all .3s;
 }
 .slider img{
     width: 100%;
-    height: 100%;
+    height: 750px;
 }
 @keyframes cambio {
 	0% {margin-left: 0;}
@@ -131,7 +180,10 @@ transition: all .3s;
 
 /*...Slider3...*/
 .slider3{
-    background: aquamarine;
+    background: rgb(255,227,177);
+    background: linear-gradient(94deg, rgba(255,227,177,1) 0%,
+  rgba(252,213,230,1) 45%, rgba(196,202,226,1) 68%,
+   rgba(143,193,244,1) 100%);
     width: 100%;
     height: 350px;
     line-height: 320px;
@@ -143,13 +195,13 @@ transition: all .3s;
     padding: 0px;
     text-align: center;
     font-size: 100px;
-    color: blanchedalmond;
+    color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /*...Slider4...*/
 .slider4{
-    background: steelblue;
+    background: linear-gradient(30deg,#6f72e7,#fa67b5);
     width: 100%;
     height: 350px;
     line-height: 320px;
@@ -161,7 +213,8 @@ transition: all .3s;
     padding: 0px;
     text-align: center;
     font-size: 100px;
-    color: blanchedalmond;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /*...Slider5...*/
@@ -179,6 +232,48 @@ transition: all .3s;
     text-align: center;
     font-size: 100px;
     background: linear-gradient(30deg,#6f72e7,#67fa67);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*...Slider6...*/
+.slider6{
+    background: black;
+    width: 100%;
+    height: 350px;
+    line-height: 320px;
+    text-shadow: 0px 0px 5px #4444;
+    color: black;
+}
+.slider6 h2{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-size: 100px;
+    background: rgb(243,234,255);
+    background: linear-gradient(94deg, rgba(243,234,255,1) 40%, rgba(111,114,231,1) 60%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*...Slider7...*/
+.slider7{
+    background: white;
+    width: 100%;
+    height: 350px;
+    line-height: 320px;
+    text-shadow: 0px 0px 5px #4444;
+    color: black;
+}
+.slider7 h2{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-size: 100px;
+    background: rgb(243,234,255);
+    background: linear-gradient(94deg, rgba(243,234,255,1) 47%, rgba(143,193,244,1) 52%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -213,18 +308,19 @@ transition: all .3s;
     text-align: center;
     margin-bottom: 30px;
     font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .container-categoria{
     width: 1200px;
-    height: 700px;
-    background: gray;
+    height: auto;
+    background: transparent;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; 
 }
 .item-categoria{
-    background: crimson;
+    background: #6f72e7;
     color: #fff;
     float: left;
     width: 23.5%;
@@ -270,6 +366,76 @@ transition: all .3s;
     color:black;
     font-size: 19px;
     margin-left: 5px;
+}
+.categorias-section{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/*...Productos-box...*/
+.productos-section{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.container-productos{
+    width: 1200px;
+    height: auto;
+    background: transparent;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+.item-productos{
+    background: white;
+    color: #fff;
+    float: left;
+    width: 23.5%;
+    flex: none;
+    margin-bottom: 2%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: solid 3px black
+}
+.box-productos {
+    margin: 30px;
+}
+.box-productos img{
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+}
+.box-productos a{
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+    width: 100%;
+    margin: auto;
+}
+.box-productos a:hover{
+    text-decoration: underline;
+    color: cyan;
+    transition: 0.5s;
+}
+
+.box-productos span{
+    background: #6f72e7;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    border-radius: 6px;;
+}
+.box-productos p{
+    color:black;
+    font-size: 19px;
+    margin-left: 5px;
+}
+.inline-productos{
+    display: flex;
+    margin-top: 10px;
 }
 
 /*...Footer...*/
@@ -365,18 +531,22 @@ transition: all .3s;
 .table-info{
    width: 100%;
     margin:  0 auto;
+    background:transparent;
 }
 #customers {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 80%;
-    margin: 48px auto;
+    margin: auto;
     border-radius: 5px;
 } 
 #customers td, #customers th {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
+}
+#customers tr{
+    background-color: #fff;
 }
 #customers tr:nth-child(even){
     background-color: #f2f2f2;
@@ -429,7 +599,7 @@ transition: all .3s;
     margin-right: auto;
     margin-left: auto;
     margin-top: 50px;
-    background: linear-gradient(30deg,#6f72e7,#fa67b5);
+    background: linear-gradient(30deg,#67fa67,#6f72e7);
     color: white;
     font-size: 20px;
     text-decoration: none;
@@ -460,6 +630,23 @@ transition: all .3s;
     border-radius: 10px;
     border: solid 3px black;
     transition: 1.2s;
+}
+.form-group select{
+    margin-left: auto;
+    margin-right: auto;
+    width: 355px;
+    margin-top: 10px;
+    padding: 15px;
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #6f72e7;
+    color: white;
+    border-radius: 10px;
+    border: solid 3px black;
+    transition: 1.2s;
+}
+.form-group option{
+    background: black;
 }
 .form-group input[type="number"]{
     margin-left: auto;
@@ -511,10 +698,176 @@ transition: all .3s;
     background: black;
     transition: 1.2s;
 }
+.form-group select:hover{
+    background: black;
+    transition: 1.2s;
+}
 
+/*...Productos...*/
+
+.container-view{
+    background: linear-gradient(30deg,#6f72e7,#fa67b5);
+    height:auto ;
+    width: 1300px;
+    margin: 50px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+.img-view{
+    background: #fefcff;
+    width: 59%;
+    height: auto;
+    border:solid 3px black;
+}
+.img-view img{
+    height: 350px;
+    width: 350px;
+    display: block;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+.details-view{
+    background: #fefcff;
+    width: 40%;
+    border: solid 3px black;
+}
+.details-view h1{
+    margin: 25px 25px 0 25px;
+    font-size: 45px;
+    font-weight: bold;
+}
+.details-view h2{
+    margin: 0 25px;
+    font-size: 30px;
+    font-weight: lighter;
+}
+.details-view h3{
+    margin: 80px 25px;
+    font-size: 35px;
+    font-weight: lighter;
+}
+.buy-view{
+    background: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+.buttonbuy{
+    display: block;
+    margin-right: 30px;
+    background: linear-gradient(30deg,#6f72e7,#fa67b5);
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 20px;
+    border-radius: 6px;
+    border: 3px solid black;
+    transition: 1.5s;
+}
+.buttonbuy:hover{
+    background: linear-gradient(30deg,transparent,cyan);
+    transition:1.5s ;
+    color: black;
+}
+.details-view h4{
+    margin: 15px 25px;
+    font-size: 25px;
+    font-weight: lighter;
+}
+.description-view{
+    background:#fefcff;
+    width: 59%;
+    height: auto;
+    border: solid 3px black;  
+}
+.description-view h2{
+   margin: 30px 30px 0 30px;
+   font-size: 40px;
+}
+.description-view p{
+    margin: 0 30px 30px 30px;
+    font-size: 18px;
+}
+.garantia-view{
+    width: 40%;
+    padding-bottom: 130px;
+    height: auto;
+    background: #fefcff;
+    border: solid 3px black;
+}
+.garantia-view h1{
+    margin: 25px 25px 0 25px;
+}
+.garantia-view h2{
+    margin: 0 25px;
+}
+.garantia-view p{
+    margin: 0 25px;
+}
+
+/*...Botones...*/
+.buttonedit{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    background: linear-gradient(30deg,#fff6a6,#ffbb00);
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 10px 5px;
+    border-radius: 6px;
+    border: 2px solid black;
+    transition: 1.5s;
+}
+.buttonedit:hover{
+    background: black;
+    color:#ffbb00 ;
+    transition: 1.2s;
+}
+.buttondelete{
+    margin-top: 3px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    background: linear-gradient(30deg,#ffa6a6,#ff0000);
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 10px 5px;
+    border-radius: 6px;
+    border: 2px solid black;
+    transition: 1.5s;
+}
+.buttondelete:hover{
+    background: black;
+    color: #ff0000;
+    transition: 1.2s;
+}
 /*...Fondos...*/
 
 .page-forms{
-    background: linear-gradient(30deg,#6f72e7,#67fa67);
+    background: radial-gradient(#67fa67,#6f72e7);
     /*background: url('../img/Wallpappers/White.png');*/
+}
+.page-list{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background: rgb(255,227,177);
+    background: linear-gradient(94deg, rgba(255,227,177,1) 0%, rgba(252,213,230,1) 45%, rgba(196,202,226,1) 68%, rgba(143,193,244,1) 100%);
+}
+.page-categorias{
+    background: black;
+}
+.page-producto{
+    background: linear-gradient(30deg,#6f72e7,#fa67b5);
+    padding-bottom: 100px;
+}
+.page-busqueda{
+    background: rgb(243,234,255);
+    background: linear-gradient(94deg, rgba(243,234,255,1) 44%, rgba(143,193,244,1) 60%);
 }

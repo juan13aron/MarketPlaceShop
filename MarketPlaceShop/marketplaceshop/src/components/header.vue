@@ -3,9 +3,9 @@
         <header>
         <div class="header-area">
             <div class="logo">
-                <a href="#">
+                <router-link to="/home" >
                 <img href="#" src="../assets/logo.png"/>
-                </a>
+                </router-link>
             </div>
             <nav class="navegacion">
                 <ul class="menu">

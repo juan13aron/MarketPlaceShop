@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import Router from 'vue-router'
 import Home from './components/home.vue'
+import Categorias from './components/categorias.vue'
 import Favoritos from './components/favoritos.vue'
 import InsertarProducto from './components/registroProducto.vue'
 import ListaProducto from './components/listProducto.vue'
@@ -14,6 +15,7 @@ Vue.config.productionTip = false
 Vue.use(Router)
 const routes=[
   {path:'/home',component:Home},
+  {path:'/categorias',component:Categorias},
   {path:'/favoritos',component:Favoritos},
   {path:'/registroProducto',component:InsertarProducto},
   {path:'/editarproducto/:id',component:EditarProducto},

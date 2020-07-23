@@ -2,16 +2,16 @@
     <div class="slider">
         <ul>
             <li>
-                <img src="../assets/img/slider1.jpg" alt="slider1">
+                <img src="../assets/img/Wallpappers/Publicidad1.png" alt="slider1">
             </li>
             <li>
-                <img src="../assets/img/slider2.jpg" alt="slider2">
+                <img src="../assets/img/Wallpappers/Publicidad2.png" alt="slider2">
             </li>
             <li>
-               <img src="../assets/img/slider3.jpg" alt="slider3">
+               <img src="../assets/img/Wallpappers/Fondo1.png" alt="slider3">
             </li>
             <li>
-                <img src="../assets/img/slider2.jpg" alt="slider4">
+                <img src="../assets/img/Wallpappers/Banner1.png" alt="slider4">
             </li>
         </ul>
     </div>

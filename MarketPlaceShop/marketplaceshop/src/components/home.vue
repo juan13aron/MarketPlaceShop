@@ -1,13 +1,20 @@
 <template>
   <div>
-      <sliderComponent> </sliderComponent>
+      <SliderComponent> </SliderComponent>
+      <form @submit.prevent="buscar">
+        <div  class="buscador">
+          <label for="buscar">Buscador</label><br/>
+          <input type="text" placeholder="consultar" v-model="buscar1" required/><br/>
+          <button type="submit" value="Buscar" >Enviar</button>
+        </div>
+      </form>
       <div class="categorias">
         <h1>Categorias</h1>
         <div class="container-categoria">
           <div class="item-categoria">
             <div class="box-categoria">
-              <img src="../assets/logo.png" alt="categoria 1"><br/>
-              <router-link to="/#"><a class="categoria-link">Ropa</a><br/></router-link>
+              <img src="../assets/img/categorias/videojuegos.png" alt="categoria 1"><br/>
+              <router-link to="/buscarProducto/videojuegos"><a class="categoria-link">VideoJuegos</a><br/></router-link>
               <div class="inline-categoria">
                 <span>0</span><p>Articulos de venta</p>
               </div>
@@ -15,8 +22,8 @@
           </div>
           <div class="item-categoria">
             <div class="box-categoria">
-              <img src="../assets/logo.png" alt="categoria 2"><br/>
-              <router-link to="/#"><a class="categoria-link">Ropa</a><br/></router-link>
+              <img src="../assets/img/categorias/moda.png" alt="categoria 2"><br/>
+              <router-link to="/buscarProducto/moda"><a class="categoria-link">Moda</a><br/></router-link>
               <div class="inline-categoria">
                 <span>0</span><p>Articulos de venta</p>
               </div>
@@ -24,8 +31,8 @@
           </div>
           <div class="item-categoria">
             <div class="box-categoria">
-              <img src="../assets/logo.png" alt="categoria 3"><br/>
-              <router-link to="/#"><a class="categoria-link">Ropa</a><br/></router-link>
+              <img src="../assets/img/categorias/tecnologia.png" alt="categoria 3"><br/>
+              <router-link to="/buscarProducto/tecnologia"><a class="categoria-link">Tecnologia</a><br/></router-link>
               <div class="inline-categoria">
                 <span>0</span><p>Articulos de venta</p>
               </div>
@@ -33,8 +40,8 @@
           </div>
           <div class="item-categoria">
             <div class="box-categoria">
-              <img src="../assets/logo.png" alt="categoria 4"><br/>
-              <router-link to="/#"><a class="categoria-link">Ropa</a><br/></router-link>
+              <img src="../assets/img/categorias/deporte.png" alt="categoria 4"><br/>
+              <router-link to="/buscarProducto/deporte"><a class="categoria-link">Deporte</a><br/></router-link>
               <div class="inline-categoria">
                 <span>0</span><p>Articulos de venta</p>
               </div>
@@ -42,8 +49,8 @@
           </div>
           <div class="item-categoria">
             <div class="box-categoria">
-              <img src="../assets/logo.png" alt="categoria 5"><br/>
-              <router-link to="/#"><a class="categoria-link">Ropa</a><br/></router-link>
+              <img src="../assets/img/categorias/juguetes.png" alt="categoria 5"><br/>
+              <router-link to="/buscarProducto/juguetes"><a class="categoria-link">Juguetes</a><br/></router-link>
               <div class="inline-categoria">
                 <span>0</span><p>Articulos de venta</p>
               </div>
@@ -51,8 +58,8 @@
           </div>
           <div class="item-categoria">
             <div class="box-categoria">
-              <img src="../assets/logo.png" alt="categoria 6"><br/>
-              <router-link to="/#"><a class="categoria-link">Ropa</a><br/></router-link>
+              <img src="../assets/img/categorias/electrodomesticos.png" alt="categoria 6"><br/>
+              <router-link to="/buscarProducto/electrodomesticos"><a class="categoria-link">Electrodomesticos</a><br/></router-link>
               <div class="inline-categoria">
                 <span>0</span><p>Articulos de venta</p>
               </div>
@@ -60,8 +67,8 @@
           </div>
           <div class="item-categoria">
             <div class="box-categoria">
-              <img src="../assets/logo.png" alt="categoria 7"><br/>
-              <router-link to="/buscarProducto/Iphone"><a class="categoria-link">Ropa</a><br/></router-link>
+              <img src="../assets/img/categorias/accesorios.png" alt="categoria 7"><br/>
+              <router-link to="/buscarProducto/accesorios"><a class="categoria-link">Accesorios</a><br/></router-link>
               <div class="inline-categoria">
                 <span>0</span><p>Articulos de venta</p>
               </div>
@@ -69,7 +76,7 @@
           </div>
           <div class="item-categoria">
             <div class="box-categoria">
-              <router-link to="/#"><a class="categoria-link">Ver mas...</a><br/></router-link>
+              <router-link to="/categorias"><a class="categoria-link">Ver mas...</a><br/></router-link>
             </div>
           </div>
         </div>
@@ -79,19 +86,20 @@
 <script>
 import SliderComponent from '../components/Slider.vue'
 export default {
-    name:"home",
-    components: {
-    SliderComponent,
+  name:"home",
+  components: {
+  SliderComponent,
   },
-  mehtods:{
-    buscar(buscar1){
-      this.$router.push('/buscarProducto'+buscar1)
+  methods:{
+    buscar(){
+      console.log(this.buscar1)
+      this.$router.push('/buscarProducto/'+this.buscar1)
     }
   },
   data(){
     return{
       url:null,
-      buscar:null,
+      buscar1:null,
     }
   }
 }
