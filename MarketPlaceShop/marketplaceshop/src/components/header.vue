@@ -16,7 +16,7 @@
                             <li><router-link to="/listProducto" active-class="active">Lista</router-link></li>
                         </ul>
                     </li>
-                    <li><router-link to="/favoritos" active-class="active">Favoritos</router-link></li>
+                    <li><router-link to="/favoritos/si" active-class="active">Favoritos</router-link></li>
                     <li><a href="#">Cerrar Sesion</a></li>
                 </ul>
             </nav>

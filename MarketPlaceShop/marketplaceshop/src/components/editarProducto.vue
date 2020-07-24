@@ -44,9 +44,15 @@
                 <textarea  name="descripcion" placeholder="Ingrese la descripcion" required v-model="producto.descripcion"/>
                 </div>
                 <div class="form-group">
-                <input type="file" id="file" ref="file" name="file0" v-on:change="filechange()" />
+                <input type="file" id="file" ref="file" name="file0"  v-on:change="filechange()" />
                 </div>
                 <input type="submit" value="Editar" class="buttonreg"/>
+                <div class="form-group">
+                <input type="radio" name="favorito" value="si" v-model="producto.favorito" />
+                <input type="radio" name="favorito" value="no" v-model="producto.favorito" /><br/>
+                <span>Favorito :{{producto.favorito}}</span><br/>
+                <img width="150px" :src="'http://localhost:5000/obtenerimagenproducto/'+producto.image"/>
+                </div>
             </form>
          </div>
     </div>    

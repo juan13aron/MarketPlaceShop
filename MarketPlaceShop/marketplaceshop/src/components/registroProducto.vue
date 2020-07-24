@@ -48,6 +48,11 @@
                 <input type="file" id="file" ref="file" name="file0" v-on:change="filechange()" />
                 </div>
                 <input type="submit" value="Registrar" class="buttonreg"/>
+                <div class="form-group">
+                <input type="radio" name="favorito" value="si" v-model="producto.favorito" />
+                <input type="radio" name="favorito" value="no" v-model="producto.favorito" /><br/>
+                <span>Favorito :{{producto.favorito}}</span>
+                </div>
             </form>
         </div>
     </div>    

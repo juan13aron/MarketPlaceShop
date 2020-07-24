@@ -28,6 +28,7 @@ var controller={
             var validar_precio=validator1.isEmpty(params.precio);
             var validar_unidades=validator1.isEmpty(params.unidades);
             var validar_descripcion=validator1.isEmpty(params.descripcion);
+            var validar_favorito=validator1.isEmpty(params.favorito);
         }
         catch(err){
             return res.status(404).send({
@@ -41,6 +42,7 @@ var controller={
         producto.precio=params.precio;
         producto.unidades=params.unidades;
         producto.descripcion=params.descripcion;
+        producto.favorito=params.favorito;
         producto.save((err,ProductoStored)=>{
             if(err || !ProductoStored){
                 return res.status(404).send({
@@ -114,6 +116,7 @@ var controller={
             var validar_precio=parametros.precio;
             var validar_unidades=parametros.unidades;
             var validar_descripcion=parametros.descripcion;
+            var validar_favorito=parametros.favorito;
         }catch (error){
             return res.status(404).send({
                 status:"error",
@@ -121,7 +124,7 @@ var controller={
             })
         }
         //Validar
-        if(validar_categoria && validar_precio && validar_nombre && validar_unidades && validar_descripcion){
+        if(validar_categoria && validar_precio && validar_nombre && validar_unidades && validar_descripcion && validar_favorito){
             producto.findOneAndUpdate({_id:id},parametros,{new:true},(err,ProductoActualizado)=>{
                 if(err){
                     return res.status(500).send({
@@ -178,6 +181,30 @@ var controller={
 	    Producto.find({"$or":[
 	        {"nombre":{"$regex":buscar,"$options":"i"}},
 	        {"categoria":{"$regex":buscar,"$options":"i"}},
+            ]})
+        .exec((err, productos)=>{
+	        if(err){
+	            return res.status(500).send({
+                    status:"error",
+                    message:"error en la peticion",
+                })
+            }
+            else if(!productos){
+                return res.status(404).send({
+                    status:"error",
+                    message:"No se encontro nada con los criterios",
+                })
+            }
+            return res.status(200).send({
+                status:"Exito mi mono",
+                productos,
+            })
+        })
+    },
+    searchfav:(req,res)=>{
+	    var buscar=req.params.parametro;
+	    Producto.find({"$or":[
+	        {"favorito":{"$regex":buscar,"$options":"i"}},
             ]})
         .exec((err, productos)=>{
 	        if(err){

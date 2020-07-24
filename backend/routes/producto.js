@@ -11,7 +11,8 @@ router.get('/listarproductos/:parametro?',PersonaController.get_producto);
 router.get('/buscarproducto/:id',PersonaController.get_productobyid);//listar
 router.put('/editarproducto/:id',PersonaController.update)
 router.delete('/eliminarproducto/:cosa',PersonaController.delete);
-router.get('/buscarproductos/:parametro',PersonaController.search);//buscador
+router.get('/buscarproductos/:parametro',PersonaController.search);
+router.get('/buscarfavoritos/:parametro',PersonaController.searchfav);//buscador
 router.get('/obtenerimagenproducto/:nombreimagen',PersonaController.obtener_imagen);
 router.post('/subir-imagenproducto/:id', md_upload,PersonaController.upload);
 

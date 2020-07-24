@@ -7,6 +7,7 @@ var ProductoSchema=Schema({
     precio:Number,
     unidades:Number,
     descripcion:String,
+    favorito:String,
     image:String,
 })
 module.exports=mongoose.model('Producto',ProductoSchema);

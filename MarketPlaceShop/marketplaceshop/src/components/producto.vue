@@ -33,6 +33,7 @@
 import SliderHome from './sliderHome.vue'
 import axios from 'axios'
 import Global from '../Global'
+
 export default {
     name:'Producto',
     components: {

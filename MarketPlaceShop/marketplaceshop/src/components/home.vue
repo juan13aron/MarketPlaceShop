@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page-home">
       <SliderComponent> </SliderComponent>
       <form @submit.prevent="buscar">
         <div  class="buscador">
@@ -81,8 +81,24 @@
           </div>
         </div>
       </div>
+      <div class="contact-producto">
+        <div class="container-contact-productos">
+          <div class="descripcion-contact">
+            <h1>Registra Tus Productos</h1><br/>
+            <p>Aprovecha la oprotunidad, de registrar tus productos y venderlos a buen precio
+              , ademas podras colocar los datos de cuantas unidades vas a vender, esperemos que
+              aprovechas al maximo nuestro servicio en esta plataforma.
+            </p>
+           <router-link to="/registroProducto"> <button class="buttoncontact">Registrar</button></router-link>
+          </div>
+          <div class="image-contact">
+            <img src="../assets/img/Wallpappers/Fondo2.png" alt="contact">
+          </div>
+        </div>
+      </div>
   </div>
 </template>
+
 <script>
 import SliderComponent from '../components/Slider.vue'
 export default {
@@ -100,6 +116,7 @@ export default {
     return{
       url:null,
       buscar1:null,
+      
     }
   }
 }

@@ -11,12 +11,14 @@ import BuscarProducto from './components/buscarProducto.vue'
 import Producto from './components/producto.vue'
 import ErrorComponent from './components/ErrorComponent.vue'
 
+
 Vue.config.productionTip = false
 Vue.use(Router)
+
 const routes=[
   {path:'/home',component:Home},
   {path:'/categorias',component:Categorias},
-  {path:'/favoritos',component:Favoritos},
+  {path:'/favoritos/:buscar',component:Favoritos},
   {path:'/registroProducto',component:InsertarProducto},
   {path:'/editarproducto/:id',component:EditarProducto},
   {path:'/listProducto',component:ListaProducto},
